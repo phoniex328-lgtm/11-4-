@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>自我介紹 — 詹子儀</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724;
+      --card:#0b1220;
+      --muted:#94a3b8;
+      --accent:#06b6d4;
+      --glass: rgba(255,255,255,0.03);
+      color-scheme: dark;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial; background:linear-gradient(180deg,#071021 0%,#071226 60%); color:#e6eef6}
+    a{color:var(--accent);text-decoration:none}
+    header{backdrop-filter: blur(6px); position:sticky; top:12px; margin:12px auto; max-width:1000px; padding:10px 14px; border-radius:14px; background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); box-shadow: 0 6px 18px rgba(2,6,23,0.6); display:flex; gap:12px; align-items:center; justify-content:space-between}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    nav a{margin-left:14px;color:var(--muted);font-weight:600}
+    main{max-width:1000px;margin:28px auto;padding:24px}
+    .hero{display:grid;grid-template-columns: 1fr 340px; gap:28px;align-items:center}
+    .card{background:var(--card);padding:20px;border-radius:16px;box-shadow: 0 6px 30px rgba(2,6,23,0.6);cursor:pointer;transition:transform 0.1s;}
+    .card:active{transform:scale(0.97);}
+    .intro h1{margin:0;font-size:clamp(24px,3vw,36px);letter-spacing:-0.02em}
+    .intro p{color:var(--muted);line-height:1.6}
+    .avatar{width:100%;border-radius:12px;overflow:hidden;display:flex;align-items:center;justify-content:center;padding:18px;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));}
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .skills{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{padding:8px 12px;border-radius:999px;background:var(--glass);color:var(--muted);font-weight:600;font-size:13px}
+    .projects{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+    .project{padding:14px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));transition:transform 0.1s;}
+    .project:active{transform:scale(0.97);}
+    .project h4{margin:0 0 8px 0}
+    .meta{font-size:13px;color:var(--muted)}
+    footer{max-width:1000px;margin:20px auto;padding:12px;text-align:center;color:var(--muted)}
+    form{display:grid;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:8px;color:inherit;font-size:14px}
+    button.primary{background:linear-gradient(90deg,var(--accent),#7c3aed);border:none;color:#042027;padding:10px 14px;border-radius:10px;font-weight:700;cursor:pointer;transition:transform 0.1s;}
+    button.primary:active{transform:scale(0.97);}
+    
+    /* 手機響應式 */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr; gap:16px;}
+      .card, .project{padding:16px;}
+      button.primary{width:100%;padding:14px 0;font-size:16px;}
+    }
+
+    .fade-up{transform:translateY(10px);opacity:0;animation:up 700ms forwards}
+    .delay-1{animation-delay:80ms}.delay-2{animation-delay:160ms}.delay-3{animation-delay:240ms}
+    @keyframes up{to{transform:none;opacity:1}}
+  </style>
+</head>
+<body>
+  <header class="card">
+    <div class="brand">
+      <div class="logo">詹</div>
+      <div>
+        <div style="font-weight:700">詹子儀</div>
+        <div style="font-size:12px;color:var(--muted)">勤益科大 資訊管理系學生</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#about">關於</a>
+      <a href="#projects">作品</a>
+      <a href="#contact">聯絡</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="card intro fade-up delay-1">
+        <h1>嗨，我是 <span style="color:var(--accent)">詹子儀</span></h1>
+        <p>
+          我是 <strong>國立勤益科技大學 資訊管理系</strong> 的學生，對於
+          <strong>網頁設計、資料分析</strong> 與 <strong>資訊系統應用</strong> 充滿興趣。<br><br>
+          在學期間，我學習了程式設計、資料庫管理與系統開發等相關技能，
+          並嘗試把學到的知識應用在實際專題中，例如建立個人作品集網站與校園活動管理系統。<br><br>
+          我喜歡挑戰新技術、學習解決問題，也樂於與他人合作完成專案。
+          未來希望能成為兼具 <strong>技術實力與設計思維</strong> 的資訊專業人才。
+        </p>
+      </div>
+
+      <!-- 暫無照片區塊 -->
+      <aside class="card avatar fade-up delay-2">
+        <div style="width:100%;height:300px;display:flex;align-items:center;justify-content:center;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));border-radius:12px;">
+          <span style="color:var(--muted);font-size:16px;text-align:center;">暫無照片<br>輕觸查看</span>
+        </div>
+        <div style="margin-top:10px;color:var(--muted);font-size:13px">居住地：台灣 · 可語言：中文／英文</div>
+      </aside>
+    </section>
+
+    <section id="projects" style="margin-top:20px">
+      <h2 style="margin:0 0 12px 0">作品與專案</h2>
+      <div class="projects">
+        <article class="project fade-up delay-1">
+          <h4>專題作品 A</h4>
+          <div class="meta">校園活動管理系統</div>
+          <p style="color:var(--muted);font-size:14px;margin-top:8px">使用 HTML、CSS、JavaScript 製作的校園活動管理平台。</p>
+        </article>
+        <article class="project fade-up delay-2">
+          <h4>作品 B</h4>
+          <div class="meta">個人作品集網站</div>
+          <p style="color:var(--muted);font-size:14px;margin-top:8px">展示自己作品與學習歷程的網站。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" style="margin-top:24px">
+      <h2>聯絡我</h2>
+      <div class="card" style="margin-top:10px">
+        <form onsubmit="handleSubmit(event)">
+          <input type="text" id="name" placeholder="您的姓名" required />
+          <input type="email" id="email" placeholder="電子郵件" required />
+          <textarea id="message" rows="5" placeholder="想說的話..." required></textarea>
+          <div style="display:flex;gap:8px;align-items:center;justify-content:space-between">
+            <div style="color:var(--muted);font-size:13px">或直接寄信到 <strong style="color:var(--accent)">zj@example.com</strong></div>
+            <div>
+              <button type="submit" class="primary">送出訊息</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © <span id="year"></span> 詹子儀 · <span style="color:var(--muted)">勤益科大資管系學生作品</span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    function handleSubmit(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const email=document.getElementById('email').value.trim();
+      const message=document.getElementById('message').value.trim();
+      const subject=encodeURIComponent('網站聯絡：'+name);
+      const body=encodeURIComponent('來自:'+name+'\n電子郵件:'+email+'\n\n'+message);
+      window.location.href=`mailto:zj@example.com?subject=${subject}&body=${body}`;
+    }
+
+    const io=new IntersectionObserver((entries)=>{
+      entries.forEach(ent=>{
+        if(ent.isIntersecting) ent.target.classList.remove('fade-up');
+      })
+    }, {threshold:0.12});
+
+    document.querySelectorAll('.fade-up').forEach(n=>io.observe(n));
+  </script>
+</body>
+</html>
+
